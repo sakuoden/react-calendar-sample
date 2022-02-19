@@ -28,13 +28,13 @@ const App = () => {
             <th>土</th>
           </tr>
           </thead>
-          <tbody className={"text-center align-top"}>
+          <tbody>
           {calendar.getWeeks().map((week: CalendarWeek, index: number) => {
             return (
               <tr key={index}>
                 {week.getDates().map(date => {
                   return (
-                    <td className={"border border-gray-500"} key={date.toString()}>
+                    <td key={date.toString()}>
                       {calendar.isThisMonth(date.toMonth()) ? (
                         <>{ date.toNumber() }</>
                       ) : (
